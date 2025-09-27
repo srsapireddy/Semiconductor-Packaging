@@ -1171,6 +1171,216 @@ With validation complete, you can now run the thermal analysis and view the resu
 ##### Field Plot - Bottom view
 <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/70938ebc-a67d-4011-8aa7-f007c3bd3bf1" />
 
+# 4 Ensuring Package Reliability: Testing and Performance Validation  
+
+## 4.1 Introduction to Package Testing and Electrical Functionality Checks  
+
+Integrated Circuits (ICs) undergo rigorous **testing at multiple stages** of the semiconductor manufacturing process to ensure they meet **performance, functionality, and reliability requirements**.  
+
+Testing occurs both at:  
+- **Foundries** → during and after wafer fabrication.  
+- **OSAT facilities** → during packaging and post-packaging processes.  
+
+---
+
+### 🔍 Why Testing is Critical  
+- Detects defective dies early (before costly assembly).  
+- Ensures electrical performance and compliance with specifications.  
+- Validates package reliability under mechanical, thermal, and environmental stress.  
+- Improves manufacturing yield and profitability.  
+
+---
+
+### 🛠 Types of Testing Across the Flow  
+- **Wafer-Level Testing** – Identifies known-good dies (KGD) before packaging.  
+- **Package-Level Electrical Tests** – Verifies I/O connectivity, signal integrity, and power delivery.  
+- **Reliability Tests** – Ensures robustness against stress factors (temperature cycling, humidity, vibration).  
+
+---
+
+📊 *Illustration Placeholder:*  
+### Testing at different stages
+<img width="1673" height="753" alt="image" src="https://github.com/user-attachments/assets/412f346b-4dbc-426d-8a2b-af8bf59b458b" />
+
+### 4.1.1 Foundry Testing Stages  
+
+1. **Front-End Manufacturing**  
+   - Involves fabrication of integrated circuits on silicon wafers.  
+   - Process tuning is performed to:  
+     - Improve yield  
+     - Reduce IDDQ / leakage currents  
+     - Enhance circuit speed and performance  
+
+2. **Wafer Probe Test**  
+   - Wafers are mounted on a **probe station**.  
+   - A **probe card** makes electrical contact with the bond pads or bump pads of each die.  
+   - **ATE (Automated Test Equipment)** applies test patterns to classify dies as *good* or *bad*.  
+
+---
+
+### 4.1.2 OSAT Testing Stages  
+
+1. **Wafer Sorting**  
+   - Dies are sorted based on wafer probe test results.  
+   - Only functional dies proceed to the packaging line.  
+
+2. **Package Manufacturing**  
+   - Functional dies are assembled into packages.  
+
+3. **Package Testing**  
+   Conducted in **ISO Class 6/7 cleanroom zones**, this includes:  
+   - **AOST (Assembly Open and Short Test):** Detects opens/shorts in package connections.  
+   - **Burn-in Test:** Applies elevated temperature, voltage, and power cycling to accelerate aging and identify early-life failures.  
+   - **Final Test:** Validates electrical performance of the packaged IC across voltage and temperature corners, ensuring compliance with **datasheet specifications**.  
+
+---
+
+📊 *Illustration Placeholder:*  
+### Package Testing
+<img width="1627" height="792" alt="image" src="https://github.com/user-attachments/assets/efad2071-7687-4c8d-b03c-585e662d887a" />
+
+### Assembly Open and Short Test (AOST) - Functionality
+<img width="1632" height="790" alt="image" src="https://github.com/user-attachments/assets/92d2a78b-c733-4cc3-be32-bbb09cf59476" />
+
+### 4.1.3 System-Level Testing (SLT)  
+
+System-Level Testing is performed under conditions that closely mimic **real-world system operation**.  
+- The device is placed in a **system-like environment**.  
+- Actual **software or firmware** is run to validate performance.  
+- Ensures that the IC functions properly when integrated into end products.  
+
+✅ SLT bridges the gap between **package-level tests** and **end-system validation**, catching issues that may not appear in earlier test stages.  
+
+---
+
+## 4.2 Reliability and Performance Testing of Semiconductor Packages  
+
+Reliability testing ensures that packaged ICs can withstand **mechanical, thermal, and environmental stresses** over their expected lifetime.  
+
+---
+
+### 4.2.1 Burn-in and Final Test  
+
+#### 1️⃣ Burn-In Test  
+- A **reliability screening process** where devices are subjected to:  
+  - Elevated **temperature**  
+  - Increased **voltage**  
+  - Continuous or cyclic **operation**  
+- Purpose:  
+  - Accelerates aging and triggers potential **failure mechanisms**.  
+  - Identifies **early-life failures** (also called *infant mortality*) before devices are shipped.  
+
+✅ Burn-in is critical for ensuring **high reliability in mission-critical applications** (e.g., aerospace, automotive, data centers).  
+
+---
+
+📊 *Illustration Placeholder:*  
+### Burn-in Test
+<img width="1621" height="788" alt="image" src="https://github.com/user-attachments/assets/3dac2b83-b71b-4884-b0aa-104b5b9215a3" />
+
+#### 2️⃣ Final Test (FT)  
+
+- The **last major electrical test phase** performed **after packaging**.  
+- Ensures the packaged IC meets:  
+  - **Functional requirements** → device operates as intended.  
+  - **Parametric specifications** → voltage, current, timing, leakage, etc.  
+  - **Performance limits** → speed, power consumption, thermal behavior.  
+- Conducted at **OSATs (Outsourced Semiconductor Assembly and Test providers)** or at **in-house test facilities**.  
+- Devices that fail FT are rejected; only those that pass proceed to **binning, labeling, and shipment**.  
+
+✅ **Purpose:** Guarantees that customers only receive fully functional, spec-compliant ICs.  
+
+---
+
+📊 *Illustration Placeholder:*  
+### Final Test
+<img width="1626" height="796" alt="image" src="https://github.com/user-attachments/assets/d1dfbbb0-0899-45c5-9f48-3872771f01f0" />
+
+### 🔍 Summary: ATE & Test Categories  
+
+#### 🛠 Automated Test Equipment (ATE)  
+- Specialized hardware + software platforms used to **apply test patterns** and measure IC responses.  
+- Functions:  
+  - Stimulates the IC with electrical signals.  
+  - Monitors outputs against expected results.  
+  - Automates pass/fail classification.  
+- Used at **all stages** of semiconductor testing (wafer probe, package test, SLT).  
+
+---
+
+#### 📌 Major Categories of IC Testing  
+
+1. **Wafer-Level Testing (Probe Test)**  
+   - Conducted at the foundry before dicing.  
+   - Identifies **known-good dies (KGD)**.  
+
+2. **Package-Level Testing**  
+   - Performed after packaging at OSAT or in-house ATMP units.  
+   - Includes:  
+     - **AOST (Assembly Open/Short Test)**  
+     - **Burn-in Test**  
+     - **Final Test (FT)**  
+
+3. **System-Level Testing (SLT)**  
+   - Real-world, system-like environment.  
+   - Runs **firmware or software** on the chip.  
+   - Verifies **functional behavior** under realistic workloads.  
+
+4. **Reliability & Stress Testing**  
+   - Evaluates long-term durability under stress conditions.  
+   - Examples: temperature cycling, humidity, vibration, drop tests.  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="1632" height="895" alt="image" src="https://github.com/user-attachments/assets/bbd7fa8d-b993-496a-ba99-a47fe62bb371" />
+
+# 5 Package Design and Modeling: Building a Semiconductor Package from Scratch  
+
+This is a **hands-on lab** where we will design a semiconductor **wire bond package** from scratch using **ANSYS Electronics Desktop (AEDT)**.  
+Unlike earlier chapters that focused on testing and reliability, here the emphasis is on **building the complete cross-section** of a package.  
+
+---
+
+## 5.1 Introduction to Package Cross-Section Modeling in AEDT  
+
+The main objective of this lab exercise is to construct the **full cross-section of a wire bond package**, including:  
+- Die  
+- Substrate  
+- Bonding wires  
+- Mold compound  
+
+👉 Note: This chapter is about **geometric modeling**, not simulation or analysis.  
+
+---
+
+### 📐 Package Specifications  
+
+| Component              | Material        | Dimensions / Properties             |
+|------------------------|-----------------|--------------------------------------|
+| **Die**               | Silicon         | 3 mm × 3 mm, Height: 200 μm          |
+| **Substrate**         | FR4             | 5 mm × 5 mm, Height: 500 μm          |
+| **Die Attach**        | Modified Epoxy  | 3 mm × 3 mm, Thickness: 100 μm       |
+| **Die Bond Pads**     | Copper          | 0.2 mm × 0.2 mm, Thickness: 5 μm     |
+| **Substrate Pads**    | Copper          | 0.2 mm × 0.2 mm, Thickness: 10 μm    |
+| **Bond Wire**         | Gold (JEDEC 4-pt)| Wire interconnects                  |
+| **Mold Compound**     | Epoxy           | Thickness: 1.2 mm                    |
+
+---
+
+### 🛠 Step 1: Launch AEDT and Select Q3D  
+
+1. Open **ANSYS Electronics Desktop (AEDT)**.  
+2. From the project start-up menu, select **Q3D Extractor** (alternatively, you may use **Icepak** or **Maxwell 3D** if preferred).  
+3. Create a new project and save it to your working directory.  
+
+---
+
+📊 *Illustration Placeholder:*  
+
+
+
+
 
 
 
