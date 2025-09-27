@@ -1160,16 +1160,17 @@ With validation complete, you can now run the thermal analysis and view the resu
 
 📊 *Illustration Placeholder:*  
 ##### Plot Fields
-<img width="1916" height="935" alt="image" src="https://github.com/user-attachments/assets/71b86857-71b0-4769-84e5-158fe882988c" />
+<img width="1857" height="882" alt="image" src="https://github.com/user-attachments/assets/1e0bbb6c-260f-4728-b21a-7dd8ad5706a3" />
 
 ##### Field Plot Settings
 <img width="737" height="538" alt="image" src="https://github.com/user-attachments/assets/6bd182f9-2705-42bd-99e3-d682a78e8726" />
 
 ##### Field Plot - Top view
-<img width="1915" height="1013" alt="image" src="https://github.com/user-attachments/assets/7f40fb7b-a171-49bc-90ee-dd8c348a30c4" />
+<img width="1716" height="862" alt="image" src="https://github.com/user-attachments/assets/cfe8a5a9-cab5-4099-8f6f-00022651dab7" />
 
 ##### Field Plot - Bottom view
-<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/70938ebc-a67d-4011-8aa7-f007c3bd3bf1" />
+<img width="1715" height="857" alt="image" src="https://github.com/user-attachments/assets/f81a65be-3b15-461b-961e-dc2f928cb102" />
+
 
 # 4 Ensuring Package Reliability: Testing and Performance Validation  
 
