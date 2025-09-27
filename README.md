@@ -251,6 +251,7 @@ Depending on the **medium of the package**, semiconductor packages can be catego
 ---
 # Anatomy of Packaging
 📊 *Illustration Placeholder:*  
-<img width="1602" height="747" alt="image" src="https://github.com/user-attachments/assets/03f1ca16-7101-4be2-a387-fc3ed089557b" />
+<img width="1892" height="905" alt="image" src="https://github.com/user-attachments/assets/459ca457-6dba-46b8-af6e-7ca801714ba1" />
+
 
 
