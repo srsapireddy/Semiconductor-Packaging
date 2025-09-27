@@ -512,6 +512,286 @@ Major activities performed in the cleanroom environment:
 
 ---
 
+## 2.2 Wafer Pre-Preparation – Grinding and Dicing  
+
+The **wafer pre-preparation process** is the first step inside an **ISO Class 7 cleanroom** of an ATMP (Assembly, Testing, Marking, and Packaging) facility.  
+This stage prepares fully fabricated wafers for assembly and packaging by thinning and separating the dies.  
+
+---
+
+### 🧩 Key Processes  
+
+#### 1️⃣ Wafer Grinding  
+- Purpose: Reduces wafer thickness to meet package form-factor requirements.  
+- Performed on the wafer backside using precision grinders.  
+- Ensures proper **thermal dissipation**, **mechanical stability**, and compatibility with **advanced packaging (e.g., WLCSP, 2.5D/3D ICs)**.  
+
+#### 2️⃣ Wafer Dicing  
+- Purpose: Separates the wafer into individual dies.  
+- Methods include:  
+  - **Blade Dicing** – Diamond-coated saw blades cut along scribe lines.  
+  - **Laser Dicing** – High precision, reduces mechanical stress.  
+  - **Stealth Dicing** – Laser penetrates inside the wafer, followed by stress-induced separation.  
+- Outcome: Singulated dies ready for **die attach and bonding** steps.  
+
+---
+
+📊 *Illustration Placeholder:*  
+# Inside Clean Room Area
+<img width="1612" height="765" alt="image" src="https://github.com/user-attachments/assets/9166ccc8-a435-4312-82c5-919bdcec4af7" />
+
+### 🧩 Wafer Pre-Preparation Process Flow  
+
+Inside the **ISO Class 7 cleanroom**, wafers undergo a series of precision operations to prepare them for die attach and packaging.  
+
+---
+
+#### 1️⃣ Incoming Wafer Carrier  
+- Wafers arrive in **protective carriers** to prevent contamination and mechanical damage before processing.  
+
+#### 2️⃣ Wafer Inspection  
+- Visual and optical inspection checks for:  
+  - Surface defects  
+  - Contamination  
+  - Mechanical cracks or edge damage  
+
+#### 3️⃣ Wafer Front Tape Lamination  
+- A **protective tape** is laminated on the **device (front) side** of the wafer.  
+- Prevents damage to the circuits during grinding and dicing.  
+
+#### 4️⃣ Wafer Backside Grinding  
+- Backside is thinned using a **rotating grinding wheel**.  
+- Typical reduction: **~700 μm → ~200 μm**.  
+- Benefits: improved thermal performance, flexibility, and suitability for **advanced packaging (WLCSP, 2.5D/3D ICs)**.  
+
+#### 5️⃣ Tape Frame Mounting  
+- After grinding, wafers are mounted on a **ring frame** using adhesive tape.  
+- Stabilizes the wafer and keeps dies in place during dicing.  
+
+#### 6️⃣ Two-Step Wafer Dicing  
+- **6.1 Laser Grooving**  
+  - Laser precisely cuts grooves along **scribe lines**.  
+  - Weakens wafer structure to prepare for blade cutting.  
+- **6.2 Blade Dicing**  
+  - High-precision diamond blade separates the wafer into **individual dies**.  
+  - Ensures accurate singulation with minimal chipping.  
+
+---
+
+## 2.3 Wire Bond Packaging – Die Attach to Molding  
+
+### 2.3 Wire Bond Packaging – Detailed Process Flow  
+
+Wire bond packaging involves multiple precision steps to transform singulated dies into fully packaged ICs.  
+
+---
+
+#### 1️⃣ Die Attach  
+- The individual **die** is attached to a **substrate or lead frame** using epoxy.  
+  - **1.1** Epoxy is dispensed in a controlled pattern to avoid voids (trade-off: pattern complexity vs processing speed).  
+  - **1.2** The die is picked up by a **pick-up head**.  
+  - **1.3** The die is placed on the **Die Attach Film (DAF)**.  
+
+---
+
+#### 2️⃣ Curing  
+- The die-attached unit is subjected to a **heating process**.  
+- Purpose: cures the epoxy to form a **strong and stable mechanical bond** between the die and substrate.  
+
+---
+
+#### 3️⃣ Wire Bonding  
+- Fine **gold or aluminum wires** (15–30 μm) connect the die pads to the substrate.  
+- Performed using **thermal and ultrasonic energy**.  
+- Steps:  
+  - **3.1** Formation of a **ball bond** using an **EFO (Electronic Flame-Off) spark**.  
+  - **3.2** Ball is bonded to the **die pad** (pressure + vibration + heat).  
+  - **3.3** A **wire loop** is created.  
+  - **3.4** A **crescent bond** is formed on the substrate side.  
+
+---
+
+#### 4️⃣ Molding (Transfer Molding)  
+- An **epoxy mold compound (EMC)** is injected to encapsulate the die and wires.  
+- Ensures full coverage and protection against:  
+  - Environmental stress (moisture, contamination)  
+  - Mechanical stress  
+  - Thermal cycling  
+
+---
+
+#### 5️⃣ Marking (Laser)  
+- The **molded package surface** is marked with:  
+  - Identification codes  
+  - Logos  
+  - Batch numbers  
+- Typically done using **laser engraving**.  
+
+---
+
+#### 6️⃣ Singulation  
+- The **molded wafer** is cut into **individual ICs**.  
+- A high-precision **dicing blade** is used:  
+  - Thin blades minimize chipping.  
+  - Precision ensures maximum yield.  
+
+---
+
+📊 *Illustration Placeholder:*  
+# Activities inside clean room area
+<img width="1613" height="787" alt="image" src="https://github.com/user-attachments/assets/c96c43f9-3b10-434f-b80f-c79d982af80e" />
+
+---
+
+## 2.4 Flip Chip Assembly – Bump Formation and Underfill  
+
+**Flip chip packaging** is an advanced assembly technique that improves **electrical performance**, **I/O density**, and **thermal efficiency** by mounting the die **face-down** on the substrate.  
+Unlike wire bonding, which relies on fine wires, flip chip uses **solder bumps** to form direct interconnects between the die and the substrate.  
+
+---
+
+### 2.4 Flip Chip Assembly – Detailed Process Flow  
+
+Flip chip packaging replaces wire bonds with **solder bumps**, mounting the die **face-down** on the substrate for improved electrical, thermal, and mechanical performance.  
+
+---
+
+#### 1️⃣ Bump Formation on Silicon (Si)  
+- **1.1** Solder bumps are deposited on the die pads.  
+- **1.2** Bumps are **reflowed** to create strong electrical and mechanical connections.  
+
+---
+
+#### 2️⃣ Chip Flip and Placement  
+- **2.1** The die is flipped **upside down** (active side facing substrate).  
+- **2.2** Solder bumps are aligned with the substrate bond pads.  
+- **2.3** Flux is dispensed on the substrate to aid solder wetting and bonding.  
+
+---
+
+#### 3️⃣ Solder Reflow  
+- The die-substrate assembly is **heated** so solder bumps melt and form reliable interconnects.  
+
+---
+
+#### 4️⃣ Flux Cleansing  
+- Residual flux is removed using **solvent spray**.  
+- Prevents **corrosion** and ensures package reliability.  
+
+---
+
+#### 5️⃣ Underfill Process  
+- **Underfill Dispensing:** Epoxy underfill is applied between die and substrate.  
+- **Underfill Cure:** Heat treatment cures the material, improving:  
+  - Mechanical strength  
+  - Thermal conductivity  
+  - Resistance to stress during thermal cycling  
+
+---
+
+#### 6️⃣ Molding  
+- A **protective mold compound** encapsulates the package.  
+- Provides resistance to moisture, mechanical shock, and contaminants.  
+
+---
+
+#### 7️⃣ Marking  
+- **Laser marking** adds:  
+  - Part number  
+  - Lot number  
+  - Batch code  
+  - Date of manufacture  
+- Ensures traceability in supply chain.  
+
+---
+
+#### 8️⃣ Ball Mounting and Final Reflow  
+- **Solder balls** are mounted on the underside of the substrate.  
+- Final **reflow** ensures firm attachment of balls → ready for **PCB mounting**.  
+
+---
+
+📊 *Illustration Placeholder:*  
+# Activities in clean room area
+<img width="1613" height="778" alt="image" src="https://github.com/user-attachments/assets/467b4114-42c2-476f-85f5-fac65dfe2bd4" />
+
+---
+
+## 2.5 Wafer-Level Packaging (WLP) and Conclusion  
+
+**Wafer-Level Packaging (WLP)** is a technique where the entire packaging process is completed **at the wafer level before dicing**.  
+This approach offers:  
+- 📏 Smaller package size  
+- 💲 Lower cost  
+- ⚡ Improved electrical performance due to shorter interconnects  
+
+---
+
+### 🧩 Types of WLP  
+
+#### 1️⃣ Fan-in WLP (FI-WLP)  
+- I/O pads are **redistributed within the die area**.  
+- Solder bumps are confined inside the footprint of the die.  
+- Suitable for low to medium I/O count devices.  
+- Commonly used in **mobile and consumer electronics**.  
+
+#### 2️⃣ Fan-out WLP (FO-WLP)  
+- Uses **RDLs (Redistribution Layers)** to extend I/O pads **beyond the die area**.  
+- Enables **higher I/O density** without increasing die size.  
+- Supports heterogeneous integration (multi-die, SiP).  
+- Widely adopted in **high-performance, compact devices**.  
+
+---
+
+### 🔄 FO-WLP Process Flow  
+
+1. **Wafer Reconstitution** – Known Good Dies (KGD) are placed on a carrier.  
+2. **Encapsulation** – The dies are molded into an epoxy panel.  
+3. **RDL Formation** – Redistribution layers reroute I/O pads to new bump locations.  
+4. **Bump Formation** – Solder bumps are formed at redistributed pads.  
+5. **Singulation** – The reconstituted wafer is diced into individual WLP packages.  
+
+---
+
+📊 *Illustration Placeholder:*  
+# Activities inside clean room area
+<img width="1617" height="785" alt="image" src="https://github.com/user-attachments/assets/7079a545-661f-41d3-b096-05fd7632a9cc" />
+
+### 2.5.1 FO-WLP Process Flow  
+
+Fan-Out Wafer-Level Packaging (FO-WLP) extends the die footprint using **Redistribution Layers (RDLs)**, enabling higher I/O density and advanced system integration.  
+
+---
+
+#### 1️⃣ Reconstitution Process  
+- **1.1** Diced wafer is taken.  
+- **1.2** Only **known-good dies (KGDs)** are selected and placed onto a temporary carrier.  
+- **1.3** Dies are **molded into epoxy** to form a single **reconstituted wafer**, after which the carrier is released.  
+
+---
+
+#### 2️⃣ RDL (Redistribution Layer) Preparation  
+- **2.1** Deposition of **dielectric and metal layers** on the reconstituted wafer.  
+- **2.2** Multiple RDL layers are patterned, similar to **BEOL metallization** in CMOS fabrication.  
+- Function: redistributes I/O pads to match new solder bump layouts.  
+
+---
+
+#### 3️⃣ Solder Ball Attach  
+- Solder balls are mounted onto the final RDL pads.  
+- Provides surface-mount connectivity for PCB integration.  
+
+---
+
+#### 4️⃣ Final Laser Marking & Singulation  
+- Each packaged die is **laser-marked** with part numbers, lot codes, and date codes for traceability.  
+- The reconstituted wafer is **diced (singulated)** into individual FO-WLP packages.  
+
+---
+
+
+
+
 
 
 
