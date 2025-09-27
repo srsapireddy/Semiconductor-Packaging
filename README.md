@@ -955,8 +955,10 @@ To simulate realistic thermal conditions, a **fixed ambient temperature** bounda
 📊 *Illustration Placeholder:*  
 #### Add Source Thermal Model for Substrate
 <img width="1913" height="1030" alt="image" src="https://github.com/user-attachments/assets/3bc84483-c537-4882-81eb-fdf915aa031f" />
+
 #### Boundary condition on thermal
 <img width="1916" height="1032" alt="image" src="https://github.com/user-attachments/assets/389c695f-7baa-4694-9376-663c3bef361c" />
+
 #### Remove Boundary Source so that we dont have multiple boundary conditions
 <img width="1915" height="1027" alt="image" src="https://github.com/user-attachments/assets/0fefd986-86e8-4015-864c-dc7b286950ea" />
 
@@ -991,12 +993,16 @@ They provide real-time data such as **junction temperature (Tj)** and substrate 
 📊 *Illustration Placeholder:*  
 #### Monitors
 <img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/d42a458b-507d-4daf-9db8-1a8931e88606" />
+
 #### On the substrate
 <img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/d9e411db-5f65-4a74-9988-eb5d489bea1c" />
+
 #### Adding Point Monitor: Temperature
 <img width="1917" height="1032" alt="image" src="https://github.com/user-attachments/assets/feb8f324-2ab2-410e-bca5-68a52dc22ba8" />
+
 #### Assigning the monitor on the die
 <img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/7fb2a8f7-4057-4535-8477-bee7fd5871ef" />
+
 #### Also assign monitor for the underfill
 <img width="547" height="468" alt="image" src="https://github.com/user-attachments/assets/b39d95f0-578a-49fc-a213-b5e03ddf5a7f" />
 <img width="1916" height="1028" alt="image" src="https://github.com/user-attachments/assets/ff4312b3-ce90-460b-95e3-76dc3bc88c14" />
@@ -1039,11 +1045,14 @@ Key metrics include:
 📊 *Illustration Placeholder:*  
 #### Mesh Generation
 <img width="1917" height="1028" alt="image" src="https://github.com/user-attachments/assets/c9a3f872-8b11-4aaa-88fd-d277bd9b3e2e" />
+
 #### Properties of Mesh
 ##### Mesh Quality - Face Alignment
 <img width="501" height="663" alt="image" src="https://github.com/user-attachments/assets/8cef8231-02b1-4249-8e2b-163b7aa79a24" />
+
 ##### Mesh Quality - Skewness
 <img width="501" height="662" alt="image" src="https://github.com/user-attachments/assets/9d71f669-1048-4a2b-ba2b-c8cc7da22699" />
+
 ##### Mesh Quality - Volume
 <img width="498" height="662" alt="image" src="https://github.com/user-attachments/assets/13b78f05-ddd1-4be2-b97f-a2d15301fad8" />
 
@@ -1119,6 +1128,7 @@ With validation complete, you can now run the thermal analysis and view the resu
 <img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/5978ac61-aa18-4a33-abe1-c647932a85b4" />
 <img width="1917" height="1028" alt="image" src="https://github.com/user-attachments/assets/d184ecfb-0ee2-4b57-94f8-cd59f2b1fec3" />
 <img width="1913" height="1027" alt="image" src="https://github.com/user-attachments/assets/0660266c-8765-4fdf-bd6c-47d2d7a14406" />
+
 #### After adding to a particular region the mesh
 <img width="1916" height="1027" alt="image" src="https://github.com/user-attachments/assets/4c910e47-437b-4e9c-aefc-895fd2fda0b9" />
 
@@ -1151,10 +1161,13 @@ With validation complete, you can now run the thermal analysis and view the resu
 📊 *Illustration Placeholder:*  
 ##### Plot Fields
 <img width="1916" height="935" alt="image" src="https://github.com/user-attachments/assets/71b86857-71b0-4769-84e5-158fe882988c" />
+
 ##### Field Plot Settings
 <img width="737" height="538" alt="image" src="https://github.com/user-attachments/assets/6bd182f9-2705-42bd-99e3-d682a78e8726" />
+
 ##### Field Plot - Top view
 <img width="1915" height="1013" alt="image" src="https://github.com/user-attachments/assets/7f40fb7b-a171-49bc-90ee-dd8c348a30c4" />
+
 ##### Field Plot - Bottom view
 <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/70938ebc-a67d-4011-8aa7-f007c3bd3bf1" />
 
