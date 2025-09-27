@@ -249,7 +249,7 @@ Depending on the **medium of the package**, semiconductor packages can be catego
 - **2.5D:** Employs **silicon interposers** for high-speed interconnects (e.g., **CoWoS** from TSMC/Nvidia).  
 
 ---
-
+# Anatomy of Packaging
 📊 *Illustration Placeholder:*  
 <img width="1602" height="747" alt="image" src="https://github.com/user-attachments/assets/03f1ca16-7101-4be2-a387-fc3ed089557b" />
 
