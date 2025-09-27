@@ -212,6 +212,7 @@ Semiconductor packages can be broadly grouped into two main categories:
 <img width="1075" height="846" alt="image" src="https://github.com/user-attachments/assets/0f1fce1b-aac6-423e-9bbb-85158e4c35bb" />
 
 📖 **Reference**: *[SK Hynix Newsroom: Semiconductor Back-End Process Episode 3](https://news.skhynix.com/semiconductor-back-end-process-episode-3-understanding-the-different-types-of-semiconductor-packages/)*  
+
 ---
 
 ### 🔍 Key Distinction  
