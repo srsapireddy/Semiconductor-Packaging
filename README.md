@@ -807,8 +807,361 @@ All of these are combined into a **single, unified platform**, making AEDT one o
 
 ---
 
+## 3.2 Setting Up a Flip-Chip BGA Package  
+
+In this lab exercise, we will use an existing **Flip-Chip Ball Grid Array (FC-BGA) package** available within the **ANSYS Icepak Toolkit** for thermal simulation.  
+
+---
+
+### 🛠 Step-by-Step Instructions  
+
+#### Step 1: Launch Icepak in AEDT  
+1. Open **ANSYS Electronics Desktop (AEDT)**.  
+2. From the project launcher, select **Icepak** as the active tool.  
+3. Create a **new project** and save it to your working directory.  
+
+---
+
 📊 *Illustration Placeholder:*  
-<img width="1915" height="1026" alt="image" src="https://github.com/user-attachments/assets/6ef24a87-8013-4edb-8831-c9f1a86f1853" />
+<img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/9456dd2c-d222-4745-a214-1cd26afb9f63" />
+
+
+#### Step 2: Import the Flip-Chip BGA Package  
+
+We will use a pre-defined **Flip-Chip BGA (FC-BGA) package** model available in the Icepak Toolkit.  
+
+---
+
+##### Step 2.1: Create a Flip-Chip BGA Package  
+1. In AEDT, go to the **Icepak** interface.  
+2. Navigate to:  
+   **Toolkit → Geometry → Packages → Flipchip_BGA**  
+3. Select the **Flipchip_BGA** option.  
+4. Enter the package parameters (default values can be used for this exercise).  
+5. Confirm and generate the package geometry.  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="1917" height="1028" alt="image" src="https://github.com/user-attachments/assets/1a600893-c49c-4701-9627-356d7f76a7ee" />
+
+##### Step 2.2: Configure the Package  
+
+1. Once you select **Flipchip_BGA** in the toolkit, the **Package Configuration** window will open.  
+2. In this window, you can set the dimensions and properties for:  
+   - **Package** (overall size and height)  
+   - **Substrate** (layers, thickness, material)  
+   - **Die** (dimensions, power dissipation settings)  
+   - **Die Underfill** (material and thickness for thermal stability)  
+   - **Solder Balls** (count, pitch, diameter, material)  
+3. Review the configuration values.  
+   - For this exercise, you may use **default values** or enter custom parameters based on the lab sheet.  
+4. Once configuration is complete, click **OK** to generate the **Flip-Chip BGA package model** in the 3D workspace.  
+
+---
+
+📊 *Illustration Placeholder:*  
+## Package Configuration 
+<img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/9cf583ad-1774-43f7-bee7-582b2f6f9d59" />
+<img width="1911" height="1027" alt="image" src="https://github.com/user-attachments/assets/c498aad5-ff2f-45c6-b18c-d560836a4835" />
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/8e70a8ba-7661-4581-b6c1-637fcd3895cf" />
+<img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/7772f281-e1fe-4956-8d06-873b72899c3d" />
+
+# Package generated in Icepak
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/bcfc530c-6e36-46fc-b692-64a35653b390" />
+
+###### Step 3 : Exploring the 3D Package Model Structure in Icepak
+#### Substrate
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/985ac4a9-fb6a-4af1-878c-77ee555a1ea2" />
+#### Die Underfill
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/33ac7e97-f2d3-4db9-b78e-7743467f5d20" />
+#### Via
+<img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/76587d45-54be-41a6-b108-96df254201b7" />
+#### Die
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/2c3b7c74-9543-41b1-b8a1-3d54d646d2f6" />
+
+## 3.3 Material Definitions and Thermal Power Sources  
+
+### Step 4: Material Definitions  
+
+In this step, you will **review and modify the material definitions** for the different components of the package model.  
+By default, Icepak assigns generic material properties, but for accurate simulation, these should be verified and updated.  
+
+---
+
+### 🧩 Typical Material Assignments  
+
+| Component        | Material        | Thermal Conductivity (W/m·K) | Density (kg/m³) | Specific Heat (J/kg·K) |
+|------------------|-----------------|------------------------------|-----------------|-------------------------|
+| **Die**          | Silicon (Si)    | ~150                         | 2330            | 700                     |
+| **Substrate**    | BT Resin / ABF  | ~0.3 – 0.4                   | 1900            | 1200                    |
+| **Underfill**    | Epoxy Resin     | ~0.3 – 0.5                   | 1200            | 1000                    |
+| **Solder Bumps** | SAC305 Alloy    | ~58                          | 7400            | 220                     |
+| **Solder Balls** | SAC305 Alloy    | ~58                          | 7400            | 220                     |
+| **Mold Compound**| Epoxy (EMC)     | ~0.5 – 1.0                   | 1900            | 1000                    |
+| **Copper Traces**| Copper (Cu)     | ~400                         | 8960            | 385                     |
+
+---
+
+### 🔍 Instructions in Icepak  
+
+1. In the **Project Manager**, expand the **Model Tree** and select each component (die, substrate, bumps, etc.).  
+2. Open **Properties → Material Assignment**.  
+3. Review the default material and replace it with the correct one from the **Icepak Material Library**.  
+4. If needed, create **Custom Materials** by entering the thermal conductivity, density, and specific heat values.  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/1669d2d5-8bbc-4f02-922c-67597e7f5fb9" />
+
+### Step 5.1: Add / Assign Source Thermal Model for the Die  
+
+1. In the **Project Manager** sub-window, expand the **Thermal** section.  
+2. Locate **BGA1_die_source** under the sources list.  
+3. Double-click or right-click → **Properties** to open the configuration window.  
+4. Define the **thermal condition** for the die. Example settings may include:  
+   - **Power Dissipation:** e.g., `5 W` (adjust as per exercise)  
+   - **Heat Source Type:** Uniform (applied evenly across die area)  
+   - **Die Temperature Monitoring:** Enabled for simulation output tracking  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/b6ef0daf-f63c-4b4f-8cc3-3a154932654a" />
+
+### Step 5.2: Add / Assign Source Thermal Model for the Substrate  
+
+To simulate realistic thermal conditions, a **fixed ambient temperature** boundary is applied to the substrate.  
+
+---
+
+#### 🛠 Instructions  
+1. In the **Project Manager**, expand the tree:  
+   `Models → Flipchip_BGA1_Group → Solids`  
+2. Right-click on **Flipchip_BGA1_substrate**.  
+3. Select **Assign Thermal Source**.  
+4. In the configuration window:  
+   - **Source Type:** Fixed Temperature  
+   - **Temperature:** Ambient (e.g., `25°C`)  
+
+---
+
+✅ This ensures the substrate acts as a **heat spreader to the environment**, maintaining system stability during thermal simulation.  
+
+📊 *Illustration Placeholder:*  
+#### Add Source Thermal Model for Substrate
+<img width="1913" height="1030" alt="image" src="https://github.com/user-attachments/assets/3bc84483-c537-4882-81eb-fdf915aa031f" />
+#### Boundary condition on thermal
+<img width="1916" height="1032" alt="image" src="https://github.com/user-attachments/assets/389c695f-7baa-4694-9376-663c3bef361c" />
+#### Remove Boundary Source so that we dont have multiple boundary conditions
+<img width="1915" height="1027" alt="image" src="https://github.com/user-attachments/assets/0fefd986-86e8-4015-864c-dc7b286950ea" />
+
+## Step 6: Add Thermal Monitors for Package Components  
+
+Thermal monitors allow you to **track temperature distribution** at key components during the simulation.  
+They provide real-time data such as **junction temperature (Tj)** and substrate temperatures, which are critical for thermal analysis.  
+
+---
+
+### 🛠 Instructions  
+
+1. In the **Project Manager**, expand the tree:  
+   `Models → Flipchip_BGA1_Group → Solids`  
+
+2. Right-click on **Flipchip_BGA1_substrate**.  
+   - Choose **Assign Monitor → Point...**  
+   - In the sub-window, select **Temperature** as the monitor type.  
+
+3. Repeat the same steps for:  
+   - **Die** → to monitor junction temperature.  
+   - **Die Underfill** → to observe thermal stress and heat dissipation effectiveness.  
+
+---
+
+### ✅ Notes  
+- Monitors should be placed at **critical heat paths** (die, underfill, substrate) to capture accurate results.  
+- Multiple monitors can be used to compare **temperature gradients** across layers.  
+
+---
+
+📊 *Illustration Placeholder:*  
+#### Monitors
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/d42a458b-507d-4daf-9db8-1a8931e88606" />
+#### On the substrate
+<img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/d9e411db-5f65-4a74-9988-eb5d489bea1c" />
+#### Adding Point Monitor: Temperature
+<img width="1917" height="1032" alt="image" src="https://github.com/user-attachments/assets/feb8f324-2ab2-410e-bca5-68a52dc22ba8" />
+#### Assigning the monitor on the die
+<img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/7fb2a8f7-4057-4535-8477-bee7fd5871ef" />
+#### Also assign monitor for the underfill
+<img width="547" height="468" alt="image" src="https://github.com/user-attachments/assets/b39d95f0-578a-49fc-a213-b5e03ddf5a7f" />
+<img width="1916" height="1028" alt="image" src="https://github.com/user-attachments/assets/ff4312b3-ce90-460b-95e3-76dc3bc88c14" />
+
+## 3.4 Meshing and Running the Thermal Analysis  
+
+Meshing is the process of dividing the geometry into smaller computational cells for simulation.  
+The accuracy and stability of the thermal analysis strongly depend on mesh quality.  
+
+---
+
+### Step 7.1: Generate Mesh  
+
+1. Go to the **Simulation** tab.  
+2. Click on **Generate Mesh**.  
+3. If prompted, **save the project** before proceeding.  
+4. Wait for mesh generation to complete.  
+5. Review the console/log window for any **errors or warnings**:  
+   - If warnings are minor (e.g., small element size mismatch), note them.  
+   - If errors occur, debug by refining geometry or adjusting mesh settings.  
+
+---
+
+### Step 7.2: Review Mesh Quality Metrics  
+
+Once the mesh is generated, review its quality to ensure it is suitable for accurate simulation.  
+Key metrics include:  
+
+- **Face Alignment** – Ensures cell faces align properly with geometry boundaries.  
+- **Skewness** – Measures deviation of cells from the ideal shape (lower skewness = better quality).  
+- **Volume** – Checks for distorted or very small cell volumes that may cause solver instabilities.  
+
+✅ Mesh should have:  
+- Low skewness (preferably < 0.85).  
+- No negative volumes.  
+- Well-aligned faces in critical heat transfer paths (die, bumps, underfill, substrate).  
+
+---
+
+📊 *Illustration Placeholder:*  
+#### Mesh Generation
+<img width="1917" height="1028" alt="image" src="https://github.com/user-attachments/assets/c9a3f872-8b11-4aaa-88fd-d277bd9b3e2e" />
+#### Properties of Mesh
+##### Mesh Quality - Face Alignment
+<img width="501" height="663" alt="image" src="https://github.com/user-attachments/assets/8cef8231-02b1-4249-8e2b-163b7aa79a24" />
+##### Mesh Quality - Skewness
+<img width="501" height="662" alt="image" src="https://github.com/user-attachments/assets/9d71f669-1048-4a2b-ba2b-c8cc7da22699" />
+##### Mesh Quality - Volume
+<img width="498" height="662" alt="image" src="https://github.com/user-attachments/assets/13b78f05-ddd1-4be2-b97f-a2d15301fad8" />
+
+### Step 8: Add Thermal Analysis  
+
+With the geometry, materials, sources, and mesh prepared, the next step is to set up the **thermal solver**.  
+
+---
+
+#### 🛠 Instructions  
+1. In the **Project Manager**, right-click on **Analysis**.  
+2. Select **Add Analysis Setup**.  
+3. The solver configuration window will open.  
+4. For this exercise, use the **default solver settings**:  
+   - Analysis type: **Steady-State Thermal**  
+   - Convergence criteria: Default values  
+   - Iteration settings: Default values  
+5. Click **OK** to finalize the analysis setup.  
+
+---
+
+✅ Notes:  
+- Advanced users may modify solver controls (e.g., convergence tolerances, iteration limits, solver type), but for this lab we will keep defaults.  
+- Ensure the project is **saved** before running the simulation.  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="770" height="697" alt="image" src="https://github.com/user-attachments/assets/f74ff6dd-6e43-401f-a018-31c1b45f24eb" />
+
+## 3.5 Viewing Results and Exploring Other Package Types  
+
+Before running the solver, it is important to **validate the simulation setup** to ensure all definitions, boundary conditions, and monitors are properly assigned.  
+
+---
+
+### Step 9: Validate the Simulation Setup  
+
+1. In the **top ribbon toolbar**, click on the **Validate** button.  
+2. Icepak will check for:  
+   - Missing material assignments  
+   - Unassigned thermal sources  
+   - Boundary condition inconsistencies  
+   - Monitor setup errors  
+   - Mesh validity  
+3. Review the validation results in the message window.  
+   - ✅ If all checks pass → proceed to solver run.  
+   - ⚠️ If warnings appear → note them, but simulation can often continue.  
+   - ❌ If errors are flagged → return to earlier steps to fix issues.  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="555" height="332" alt="image" src="https://github.com/user-attachments/assets/dab2a29e-1828-488d-af1d-89ad9845488d" />
+
+### Step 10: Run the Simulation and Plot the Temperature Map  
+
+With validation complete, you can now run the thermal analysis and view the results.  
+
+---
+
+#### 🛠 Instructions  
+
+1. In the **top ribbon toolbar**, click on **Analyze All**.  
+2. Wait for the simulation to complete.  
+   - ✅ Successful run → proceed to visualization.  
+   - ⚠️ Warnings → review but often ignorable.  
+   - ❌ Errors → return to setup and correct issues.  
+
+---
+#### Assigning Mesh Seperately for Underfill
+<img width="827" height="255" alt="image" src="https://github.com/user-attachments/assets/d53085f4-b881-4f2b-81c9-b42e7e1e9999" />
+<img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/5978ac61-aa18-4a33-abe1-c647932a85b4" />
+<img width="1917" height="1028" alt="image" src="https://github.com/user-attachments/assets/d184ecfb-0ee2-4b57-94f8-cd59f2b1fec3" />
+<img width="1913" height="1027" alt="image" src="https://github.com/user-attachments/assets/0660266c-8765-4fdf-bd6c-47d2d7a14406" />
+#### After adding to a particular region the mesh
+<img width="1916" height="1027" alt="image" src="https://github.com/user-attachments/assets/4c910e47-437b-4e9c-aefc-895fd2fda0b9" />
+
+1. Then again Generate Mesh
+2. Then again Validate
+<img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/fb873916-5681-460f-9c8c-68a43e86461c" />
+3. Then analyze again to do the calculation
+
+
+#### 📊 Plotting the Temperature Map  
+
+1. In the 3D view, select the entire **Flip-Chip BGA package** by drawing a rectangle with the left mouse button.  
+2. Right-click and navigate to:  
+   **Plot Fields → Temperature → Temperature**  
+3. Configure the plot options:  
+   - **Name & Folder:** Enter descriptive labels for saving plots.  
+   - **Plot on Surface Only:** Enabled (for surface heat maps).  
+   - **Surface Smoothing:** Enable **Gaussian Smoothing** for cleaner visuals.  
+4. Apply settings → the **temperature distribution map** will be displayed across the package.  
+
+---
+
+✅ This visualization helps identify:  
+- **Hotspots** on the die or solder joints  
+- **Thermal gradients** across the substrate  
+- **Heat flow paths** in the package  
+
+---
+
+📊 *Illustration Placeholder:*  
+##### Plot Fields
+<img width="1916" height="935" alt="image" src="https://github.com/user-attachments/assets/71b86857-71b0-4769-84e5-158fe882988c" />
+##### Field Plot Settings
+<img width="737" height="538" alt="image" src="https://github.com/user-attachments/assets/6bd182f9-2705-42bd-99e3-d682a78e8726" />
+##### Field Plot - Top view
+<img width="1915" height="1013" alt="image" src="https://github.com/user-attachments/assets/7f40fb7b-a171-49bc-90ee-dd8c348a30c4" />
+##### Field Plot - Bottom view
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/70938ebc-a67d-4011-8aa7-f007c3bd3bf1" />
+
+
+
+
+
+
+
+
 
 
 
