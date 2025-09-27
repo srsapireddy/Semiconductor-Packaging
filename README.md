@@ -870,14 +870,16 @@ We will use a pre-defined **Flip-Chip BGA (FC-BGA) package** model available in 
 # Package generated in Icepak
 <img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/bcfc530c-6e36-46fc-b692-64a35653b390" />
 
-###### Step 3 : Exploring the 3D Package Model Structure in Icepak
+##### Step 3 : Exploring the 3D Package Model Structure in Icepak
 #### Substrate
 <img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/985ac4a9-fb6a-4af1-878c-77ee555a1ea2" />
-</br>
+
 #### Die Underfill
 <img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/33ac7e97-f2d3-4db9-b78e-7743467f5d20" />
+
 #### Via
 <img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/76587d45-54be-41a6-b108-96df254201b7" />
+
 #### Die
 <img width="1917" height="1030" alt="image" src="https://github.com/user-attachments/assets/2c3b7c74-9543-41b1-b8a1-3d54d646d2f6" />
 
