@@ -789,6 +789,29 @@ Fan-Out Wafer-Level Packaging (FO-WLP) extends the die footprint using **Redistr
 
 ---
 
+# 3 Labs: Thermal Simulation of Semiconductor Packages with ANSYS Tools  
+
+## 3.1 Introduction and Getting Started with ANSYS Electronics Desktop  
+
+**ANSYS Electronics Desktop (AEDT)** is a powerful **multi-physics simulation environment** that integrates:  
+
+- 📡 **Electromagnetic (EM) Simulation**  
+- ⚡ **Signal and Power Integrity Analysis**  
+- 🌡 **Thermal Simulation**  
+- 🛠 **Electro-Mechanical Simulation**  
+
+All of these are combined into a **single, unified platform**, making AEDT one of the most widely used tools for:  
+- Designing high-speed electronic circuits and systems  
+- Analyzing package performance under electrical, thermal, and mechanical stresses  
+- Optimizing IC packaging for **reliability, performance, and thermal efficiency**  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="1915" height="1026" alt="image" src="https://github.com/user-attachments/assets/6ef24a87-8013-4edb-8831-c9f1a86f1853" />
+
+
+
 
 
 
