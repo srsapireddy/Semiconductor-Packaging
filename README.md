@@ -1474,10 +1474,13 @@ Next, we will model the **substrate** that supports the die and provides electri
 ### Die on the Substrate
 📊 *Illustration Placeholder:*  
 <img width="1917" height="963" alt="image" src="https://github.com/user-attachments/assets/58029d4d-1a7a-46b2-acbd-0fc955104176" />
+
 ### 3D Illustration: Choose substrate as 500u
 <img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/66181608-2da3-432f-8c0f-7f90f56368b6" />
+
 ### Die is hidden as shown below
 <img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/8a50ebc6-5f50-4b9b-8971-f6032e1ee0aa" />
+
 ### Making the Die visible
 <img width="1916" height="965" alt="image" src="https://github.com/user-attachments/assets/85055068-1044-49f9-8068-97be1c069bd0" />
 <img width="1913" height="966" alt="image" src="https://github.com/user-attachments/assets/fcfb63c6-a264-48c8-a0bc-1a228ac8fa6b" />
@@ -1515,18 +1518,24 @@ This layer plays a key role in providing **mechanical adhesion**, **thermal cond
 
 📊 *Illustration Placeholder:*  
 ### Putting the Die Attach Material between Die and Substrate
+
 ### Changing the substrate material
 <img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/7e718cfb-3d94-4d44-a7df-b2c00930c7c3" />
 <img width="1915" height="965" alt="image" src="https://github.com/user-attachments/assets/1d2699c2-5a69-4b31-898f-e62df412a680" />
+
 ### For the space between the die and attach - Change the position of the substrate
 <img width="1915" height="968" alt="image" src="https://github.com/user-attachments/assets/19990fa8-8d53-4a07-8e88-d12e9782dc4f" />
 <img width="1918" height="970" alt="image" src="https://github.com/user-attachments/assets/763ca854-549e-401b-88ed-1b79a3a80075" />
+
 ### Adding Die Attach Material in between Die and Substrate
+
 #### Changing the position
 <img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/db24b36f-71d7-4a8e-b4cd-f82079346eab" />
+
 ### Changing the Thickness
 <img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/a5a4380d-af5c-46af-a7c7-ba6e7703f596" />
 <img width="1916" height="967" alt="image" src="https://github.com/user-attachments/assets/db0d1d1b-8020-40eb-a0b9-5e62989aaf40" />
+
 ### Changing the Name and the Material of Die Attach
 <img width="1918" height="962" alt="image" src="https://github.com/user-attachments/assets/50a3348e-df2b-400b-baf6-3bfce9a3a079" />
 
@@ -1564,9 +1573,11 @@ Use the **Duplicate / Move** function to replicate the bond pads along the edges
 ### Die Bond Pad
 #### Choosing the position
 <img width="1918" height="962" alt="image" src="https://github.com/user-attachments/assets/84327184-5fb0-4312-871d-f4042f0cb677" />
+
 ### Bond Pad Image
 <img width="1915" height="967" alt="image" src="https://github.com/user-attachments/assets/475fc198-9227-42f8-bdce-c4c76101a045" />
 <img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/2d7f6f7b-0a29-4ac8-b8c6-0529f82d6a4a" />
+
 ### Adding thickness for the pad --- thickness of 5 micron
 <img width="1917" height="966" alt="image" src="https://github.com/user-attachments/assets/2c8e204f-6148-4f86-a7d3-468ee0f31021" />
 <img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/c826fab1-c382-48fd-bbca-fb616e6e944f" />
