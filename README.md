@@ -1731,7 +1731,15 @@ The model should now display a **complete wire bond package**, consisting of:
 ---
 
 📊 *Illustration Placeholder:*  
+### Adding the Material
+<img width="1917" height="963" alt="image" src="https://github.com/user-attachments/assets/4e5b65e3-3fcb-46f4-882a-0e1433d0f1d8" />
 
+### Assigning the material
+<img width="1918" height="966" alt="image" src="https://github.com/user-attachments/assets/90aa6a23-b359-46a9-bc16-2eb896b10295" />
+
+### Mold Compound Visualization
+<img width="1918" height="967" alt="image" src="https://github.com/user-attachments/assets/c5690de8-67dd-46ff-bf3d-261188b6853f" />
+<img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/8dc7de27-b6ea-40d6-95c8-7037b6b6d4d9" />
 
 
 
