@@ -1377,7 +1377,363 @@ The main objective of this lab exercise is to construct the **full cross-section
 
 ---
 
+## 5.2 Creating the Die and Substrate in AEDT  
+
+In this section, we will begin constructing the geometric model of the **wire bond package** by first defining the **working units** and then creating the **die** and **substrate**.  
+
+---
+
+### 🧭 Step 2: Define the Working Unit  
+
+Before creating any geometry, set the appropriate measurement unit for the model.  
+
+#### 🛠 Instructions  
+1. In the top toolbar, navigate to:  
+   **Modeler → Units...**  
+2. In the **Set Model Units** dialog box, choose one of the following based on design scale:  
+   - **Millimeters (mm)** – Recommended for general IC package modeling.  
+   - **Micrometers (μm)** – Recommended for fine geometry such as bond wires or thin die layers.  
+3. Click **OK** to apply the selected unit.  
+
+---
+
+✅ **Tip:**  
+Always verify the unit setting before drawing geometry — this ensures accurate dimensions and alignment across all package components.  
+
+---
+
 📊 *Illustration Placeholder:*  
+<img width="1913" height="980" alt="image" src="https://github.com/user-attachments/assets/447396ea-0771-4be3-9487-a03230f8f8fe" />
+
+### Step 3.1: Create the Die Geometry  
+
+1. In AEDT, select the **Rectangle Tool** from the ribbon or navigate to  
+   **Draw → Rectangle**.  
+2. Draw a rectangle in the workspace.  
+3. In the **Project Manager**, under **Model → Rectangle1**, double-click to open the **Properties Dialog Box**.  
+4. Specify the rectangle parameters:  
+   - **Position:** One corner at the origin `(0, 0, 0)`  
+   - **Dimensions:** `3 mm × 3 mm`  
+5. Select **Model → Rectangle1**, then from the top menu choose  
+   **Modeler → Surface → Thicken Sheet...**  
+6. In the **Thicken Sheet** dialog box, set the **thickness** to `200 μm (0.2 mm)` to represent the silicon die height.  
+
+---
+
+### Step 3.2: Assign Material Properties  
+
+1. Open the **Properties Dialog Box** again by double-clicking **Model → Rectangle1**.  
+2. Rename the geometry to **Die** for clarity.  
+3. From the **Material Library**, select **Silicon** as the material.  
+4. Confirm and close the dialog box.  
+
+✅ You have now successfully created and defined the **Die** geometry with proper material assignment.  
+
+---
+
+### Setting working Units
+📊 *Illustration Placeholder:*  
+<img width="1907" height="963" alt="image" src="https://github.com/user-attachments/assets/52d765d2-641c-4b98-b6af-87dba2fc0929" />
+<img width="1915" height="985" alt="image" src="https://github.com/user-attachments/assets/4373db8e-c281-4755-bb75-4649e870ea27" />
+
+### Creating Die as 3D Object
+### Thinckness of the Sheet
+<img width="1913" height="963" alt="image" src="https://github.com/user-attachments/assets/ea67288c-bb06-474d-b35c-d19e0851cbd4" />
+<img width="1915" height="963" alt="image" src="https://github.com/user-attachments/assets/76a394db-0917-4fca-9ae4-b75b5ddaa2e7" />
+
+### Renaming the Die and Changing the Material
+<img width="1915" height="966" alt="image" src="https://github.com/user-attachments/assets/e410539e-d7c7-4f47-98a5-12c94455a327" />
+<img width="1916" height="966" alt="image" src="https://github.com/user-attachments/assets/4a5a87c9-53d4-4d57-b222-c4e644e851ae" />
+
+### Step 4.1: Create the Substrate Geometry  
+
+Next, we will model the **substrate** that supports the die and provides electrical interconnections.  
+
+---
+
+#### 🛠 Instructions  
+
+1. Using the **Rectangle Tool**, draw another rectangle in the workspace to represent the substrate.  
+2. In the **Properties Dialog Box**, specify the following parameters:  
+   - **Position:** `(-1, -1, 0)` — this centers the die on top of the substrate.  
+   - **Dimensions:** `5 mm × 5 mm`  
+3. With the rectangle selected, go to:  
+   **Modeler → Surface → Thicken Sheet...**  
+4. Set the **Thickness** to `-500 μm (-0.5 mm)`  
+   - The **negative sign** ensures the substrate extends **below** the die.  
+5. Adjust the **Z-position** to account for the **die-attach layer thickness**:  
+   - **Adjusted Position:** `(-1, -1, -0.1)`  
+   - This ensures a 100 μm (0.1 mm) die-attach gap between the die and substrate.  
+
+---
+
+✅ After completing this step, your model should now show the **die mounted on the substrate**, correctly aligned with the intended stacking order.  
+
+---
+
+### Die on the Substrate
+📊 *Illustration Placeholder:*  
+<img width="1917" height="963" alt="image" src="https://github.com/user-attachments/assets/58029d4d-1a7a-46b2-acbd-0fc955104176" />
+### 3D Illustration: Choose substrate as 500u
+<img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/66181608-2da3-432f-8c0f-7f90f56368b6" />
+### Die is hidden as shown below
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/8a50ebc6-5f50-4b9b-8971-f6032e1ee0aa" />
+### Making the Die visible
+<img width="1916" height="965" alt="image" src="https://github.com/user-attachments/assets/85055068-1044-49f9-8068-97be1c069bd0" />
+<img width="1913" height="966" alt="image" src="https://github.com/user-attachments/assets/fcfb63c6-a264-48c8-a0bc-1a228ac8fa6b" />
+## 5.3 Adding Die Attach Material and Bond Pads  
+
+The next step is to create the **Die Attach Material (DAM)** that bonds the silicon die to the substrate.  
+This layer plays a key role in providing **mechanical adhesion**, **thermal conduction**, and **stress relief** between the die and substrate.  
+
+---
+
+### 🧱 Step 5: Create the Die Attach Material  
+
+#### 🛠 Instructions  
+
+1. Use the **Rectangle Tool** to draw a new rectangle in the workspace.  
+2. In the **Properties Dialog Box**, specify:  
+   - **Dimensions:** `3 mm × 3 mm` (same as the die)  
+   - **Position:** `(0, 0, 0)` (same coordinates as the die)  
+3. Go to **Modeler → Surface → Thicken Sheet...**  
+4. Set the **Thickness** to `-100 μm (-0.1 mm)`  
+   - The **negative sign** ensures the DAM is placed **below** the die, extending toward the substrate.  
+5. Assign the material:  
+   - From the **Material Library**, select **Modified Epoxy**.  
+6. To improve visualization:  
+   - Assign **different colors or shades** to the **die**, **die-attach**, and **substrate** layers to distinguish them easily in the 3D view.  
+
+---
+
+✅ At this stage, your model should show three stacked components:  
+- **Die** (Silicon)  
+- **Die Attach Layer** (Modified Epoxy)  
+- **Substrate** (FR4)  
+
+---
+
+📊 *Illustration Placeholder:*  
+### Putting the Die Attach Material between Die and Substrate
+### Changing the substrate material
+<img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/7e718cfb-3d94-4d44-a7df-b2c00930c7c3" />
+<img width="1915" height="965" alt="image" src="https://github.com/user-attachments/assets/1d2699c2-5a69-4b31-898f-e62df412a680" />
+### For the space between the die and attach - Change the position of the substrate
+<img width="1915" height="968" alt="image" src="https://github.com/user-attachments/assets/19990fa8-8d53-4a07-8e88-d12e9782dc4f" />
+<img width="1918" height="970" alt="image" src="https://github.com/user-attachments/assets/763ca854-549e-401b-88ed-1b79a3a80075" />
+### Adding Die Attach Material in between Die and Substrate
+#### Changing the position
+<img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/db24b36f-71d7-4a8e-b4cd-f82079346eab" />
+### Changing the Thickness
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/a5a4380d-af5c-46af-a7c7-ba6e7703f596" />
+<img width="1916" height="967" alt="image" src="https://github.com/user-attachments/assets/db0d1d1b-8020-40eb-a0b9-5e62989aaf40" />
+### Changing the Name and the Material of Die Attach
+<img width="1918" height="962" alt="image" src="https://github.com/user-attachments/assets/50a3348e-df2b-400b-baf6-3bfce9a3a079" />
+
+### Step 6: Create Bond Pads on Die and Substrate  
+
+Bond pads are the **metallic connection points** used to attach bond wires between the die and the substrate.  
+In this step, we will first create the **die bond pads**, then later add **substrate bond pads** for wire connections.  
+
+---
+
+#### 🧭 Instructions  
+
+1. Use the **Rectangle Tool** to draw a small rectangle in the workspace.  
+2. In the **Properties Dialog Box**, configure the size to represent a **die bond pad**:  
+   - **Dimensions:** `0.2 mm × 0.2 mm`  
+3. Set the **position** to:  
+   - **Coordinates:** `(0.2, 0.2, 0.2)`  
+     - This places the pad **on top of the die**, near one of its corners.  
+4. Thicken the rectangle to create a solid pad:  
+   - Go to **Modeler → Surface → Thicken Sheet...**  
+   - **Thickness:** `5 μm (0.005 mm)`  
+5. Assign the **material**:  
+   - Select **Copper (Cu)** from the **Material Library**.  
+
+---
+
+✅ You have now created your first **die bond pad**, which serves as the starting point for wire bonding connections.  
+
+💡 **Tip:**  
+Use the **Duplicate / Move** function to replicate the bond pads along the edges of the die, ensuring equal spacing and uniform alignment.  
+
+---
+
+📊 *Illustration Placeholder:*  
+### Die Bond Pad
+#### Choosing the position
+<img width="1918" height="962" alt="image" src="https://github.com/user-attachments/assets/84327184-5fb0-4312-871d-f4042f0cb677" />
+### Bond Pad Image
+<img width="1915" height="967" alt="image" src="https://github.com/user-attachments/assets/475fc198-9227-42f8-bdce-c4c76101a045" />
+<img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/2d7f6f7b-0a29-4ac8-b8c6-0529f82d6a4a" />
+### Adding thickness for the pad --- thickness of 5 micron
+<img width="1917" height="966" alt="image" src="https://github.com/user-attachments/assets/2c8e204f-6148-4f86-a7d3-468ee0f31021" />
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/c826fab1-c382-48fd-bbca-fb616e6e944f" />
+
+
+### Step 7: Create the Substrate Bond Pad  
+
+Next, we will create the **substrate bond pad**, which serves as the lower connection point for the wire bond.  
+This pad lies on the **top surface of the substrate**, aligned with the corresponding die bond pad.  
+
+---
+
+#### 🛠 Instructions  
+
+1. Use the **Rectangle Tool** to draw a new rectangle in the workspace.  
+2. In the **Properties Dialog Box**, set the parameters as follows:  
+   - **Dimensions:** `0.2 mm × 0.2 mm`  
+   - **Position:** `(0.2, -0.7, -0.1)`  
+     - This aligns the substrate bond pad directly below the previously created die bond pad.  
+3. Go to **Modeler → Surface → Thicken Sheet...**  
+   - **Thickness:** `10 μm (0.010 mm)`  
+4. Assign the **material**:  
+   - Select **Copper (Cu)** from the **Material Library**.  
+5. Verify alignment:  
+   - The substrate pad should be **flush with the top surface** of the substrate and **vertically aligned** with the die pad for wire bonding.  
+
+---
+
+✅ You have now successfully created both **die bond pads** and **substrate bond pads**, completing the interconnection interface for wire bonding.  
+
+💡 **Tip:**  
+Use different colors or shades for the die, substrate, and pads to make the 3D model easier to visualize and distinguish.  
+
+---
+
+📊 *Illustration Placeholder:*  
+### Substrate Bond Pad
+### Position of the Substrate Bond Pad
+<img width="1918" height="965" alt="image" src="https://github.com/user-attachments/assets/08c33d83-69e1-433f-882b-4cd43c9e5072" />
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/d5529785-31fe-47a1-9040-44a4109cc1fb" />
+
+
+## 5.4 Wire Bond Creation and Material Assignment  
+
+Now that both the **die bond pad** and **substrate bond pad** are defined, we can create the **bond wires** that connect them.  
+Wire bonding establishes the **electrical connection** between the die and the substrate and is one of the most common interconnect methods in semiconductor packaging.  
+
+---
+
+### 🪡 Step 7: Create Bond Wires  
+
+#### 🛠 Instructions  
+
+1. Go to the top menu and select:  
+   **Draw → Bondwire**  
+2. In the 3D workspace:  
+   - Click the **center of the Die Bond Pad** as the starting point.  
+   - Click the **center of the Substrate Bond Pad** as the end point.  
+3. It is recommended to switch to **Top View orientation** to precisely align the two pad centers.  
+4. In the **Bondwire Properties Dialog Box**:  
+   - **Bondwire Type:** `JEDEC 4-point`  
+   - **Material:** `Gold (Au)`  
+5. Confirm to generate the 3D wire geometry connecting the two pads.  
+
+---
+
+✅ **Result:**  
+You should now see a curved **gold wire** connecting the **die pad** and **substrate pad**, completing the electrical interconnect path.  
+
+💡 **Tips:**  
+- Adjust the **bond height** and **loop shape** if necessary for better clearance.  
+- Use **different colors** for wires and pads to enhance visibility in the 3D model.  
+
+---
+
+📊 *Illustration Placeholder:*  
+<img width="1916" height="971" alt="image" src="https://github.com/user-attachments/assets/af8dcd5b-2e1e-4406-896a-26f4c85f63a1" />
+<img width="1912" height="963" alt="image" src="https://github.com/user-attachments/assets/d6f88061-88bf-4dad-bac4-03a798fa46b0" />
+### Assigning material to the bond wire (Gold Bondwire)
+<img width="1916" height="970" alt="image" src="https://github.com/user-attachments/assets/a1958786-2c12-43fe-a1ef-7c5af72ab57c" />
+
+### Step 8: Replicate and Connect All Bond Pads with Bond Wires  
+
+After successfully creating and connecting one **die bond pad** to one **substrate bond pad** with a gold bond wire, the next task is to replicate this setup across all pad locations.  
+
+---
+
+#### 🛠 Instructions  
+
+1. **Duplicate the Bond Pads:**  
+   - Select the **Die Bond Pad** (Copper) you created earlier.  
+   - Use **Edit → Duplicate → Along Line...** or **Duplicate → Move...** to create additional pads along the die edge.  
+   - Repeat the same for the **Substrate Bond Pads**, ensuring each substrate pad aligns vertically beneath its corresponding die pad.  
+
+2. **Connect Each Pair with a Bond Wire:**  
+   - Use **Draw → Bondwire** again.  
+   - Click the **center of each Die Bond Pad** → then the **center of its matching Substrate Bond Pad**.  
+   - Set **Bondwire Type:** `JEDEC 4-point`  
+   - Set **Material:** `Gold (Au)`  
+   - Repeat for all pad pairs along the edges of the die.  
+
+3. **View the Complete Wire Network:**  
+   - Switch to **Top View** and **3D View** alternately to check wire alignment.  
+   - Verify that all wires are properly attached and spaced evenly.  
+
+---
+
+✅ **Result:**  
+You should now see a complete network of **bond wires** connecting all **die pads** to **substrate pads**, forming the full interconnect structure of the wire bond package.  
+
+💡 **Tip:**  
+- Use **different colors** for die, substrate, pads, and bond wires to improve visibility in 3D.  
+- Use **Hide/Show Components** in the Project Manager to inspect connections layer-by-layer.  
+
+---
+
+## 5.5 Applying Mold Compound and Finalizing the Package Model  
+
+The final step in building the wire bond package is to apply a **mold compound** that encapsulates the die, bond wires, and pads.  
+This layer provides **mechanical strength**, **moisture protection**, and **thermal stability**, ensuring the reliability of the package during operation.  
+
+---
+
+### 🧱 Step 8: Build the Mold Compound Around the Die  
+
+#### 🛠 Instructions  
+
+1. Use the **Rectangle Tool** to draw a rectangular enclosure surrounding the die and bond wires.  
+2. In the **Properties Dialog Box**, specify the parameters:  
+   - **Dimensions:** `5 mm × 5 mm`  
+   - **Position:** `(-1, -1, -0.1)`  
+     - This position ensures the mold sits **on top of the substrate**, covering the die and wires.  
+3. Go to **Modeler → Surface → Thicken Sheet...**  
+   - **Thickness:** `1.2 mm`  
+     - This thickness encapsulates both the die and the bond wires, leaving a small margin on the top for **laser marking** and surface finishing.  
+4. Assign the **material**:  
+   - Select **Epoxy (Mold Compound)** from the **Material Library**.  
+5. Adjust the **color/shade** to distinguish the mold from the substrate (e.g., dark gray or black).  
+
+---
+
+✅ **Result:**  
+The model should now display a **complete wire bond package**, consisting of:  
+- Die (Silicon)  
+- Die Attach (Modified Epoxy)  
+- Substrate (FR4)  
+- Bond Pads (Copper)  
+- Bond Wires (Gold)  
+- Mold Compound (Epoxy)  
+
+---
+
+📊 *Illustration Placeholder:*  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
